@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./fonts.css";
+
+@theme {
+	--color-blue: #3294f8;
+	--color-title: #e7edf4;
+	--color-subtitle: #c4d4e3;
+	--color-base-text: #afc2d4;
+	--color-base-span: #7b96b2;
+	--color-base-label: #3a536b;
+	--color-base-border: #1c2f41;
+	--color-base-post: #112131;
+	--color-base-profile: #0b1b2b;
+	--color-base-background: #071422;
+	--color-base-input: #040f1a;
+	--radius-default: 10px;
+}
