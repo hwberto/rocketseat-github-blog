@@ -45,7 +45,7 @@ export default function Issue() {
 
 	return (
 		<>
-			<section className="w-full p-7 bg-base-profile rounded-default shadow-lg shadow-black/20 space-y-4">
+			<section className="w-full p-7 bg-base-profile md:rounded-default shadow-lg shadow-black/20 space-y-4">
 				<div className="flex justify-between items-center w-full">
 					<Link href="/">
 						<FaChevronLeft className="text-sm" />
@@ -77,7 +77,7 @@ export default function Issue() {
 					</li>
 				</ul>
 			</section>
-			<section className="p-8 prose invert">
+			<section className="p-8 prose prose-invert">
 				<ReactMarkdown remarkPlugins={[remarkGfm]}>{issue?.body}</ReactMarkdown>
 			</section>
 		</>

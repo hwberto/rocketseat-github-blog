@@ -34,11 +34,11 @@ export function Card({
 			to={`/issue/${issueNumber}`}
 			{...props}
 		>
-			<div className="flex justify-between items-center gap-2">
+			<div className="flex max-md:flex-col md:justify-between md:items-center gap-2">
 				<h1 className="text-title text-lg font-bold line-clamp-2 break-all max-w-full">
 					{title}
 				</h1>
-				<span className="text-base-span px-2 min-w-max">
+				<span className="text-base-span md:px-2 min-w-max">
 					Há {differenceDate}
 				</span>
 			</div>

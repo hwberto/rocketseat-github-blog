@@ -31,11 +31,11 @@ export default function Home() {
 
 	return (
 		<>
-			<section className="w-full p-7 bg-base-profile rounded-default shadow-lg shadow-black/20 flex gap-6 items-center">
+			<section className="w-full p-7 bg-base-profile sm:rounded-default shadow-lg shadow-black/20 flex max-md:flex-col gap-6 items-center">
 				<img
 					src={userInfo?.avatar_url}
 					alt="Humberto Gonçalves"
-					className="size-37 rounded-lg"
+					className="max-md:size-40 size-37 rounded-lg"
 				/>
 				<div className="space-y-3 w-full">
 					<div className="flex justify-between items-center">
@@ -46,7 +46,7 @@ export default function Home() {
 						</Link>
 					</div>
 					<span className="text-base-text">{userInfo?.bio}</span>
-					<ul className="mt-5 flex gap-5 *:flex *:items-center *:gap-2 *:text-subtitle *:[&>svg]:text-base-label">
+					<ul className="mt-5 flex max-md:flex-col gap-5 *:flex *:items-center *:gap-2 *:text-subtitle *:[&>svg]:text-base-label">
 						<li>
 							<FaGithub />
 							{userInfo?.login}
@@ -62,7 +62,7 @@ export default function Home() {
 					</ul>
 				</div>
 			</section>
-			<section className="mt-10 space-y-8">
+			<section className="mt-10 space-y-8 max-md:px-10">
 				<div className="space-y-2">
 					<div className="flex justify-between items-center">
 						<h2 className="font-bold text-subtitle text-lg">Publicações</h2>
@@ -77,7 +77,7 @@ export default function Home() {
 						onChange={(e) => setSearchInputValue(e.target.value)}
 					/>
 				</div>
-				<ul className="mx-auto w-max grid grid-cols-1 md:grid-cols-2 gap-30">
+				<ul className="mx-auto w-max grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-30">
 					{searchInputValue.trim() && filteredIssues?.items?.length
 						? filteredIssues.items.map((item) => (
 								<Card
